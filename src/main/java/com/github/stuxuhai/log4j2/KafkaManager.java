@@ -1,10 +1,3 @@
-/*
- * 蘑菇街 Inc.
- * Copyright (c) 2010-2014 All Rights Reserved.
- *
- * Author: wuya
- * Create Date: 2014年10月23日 上午9:28:11
- */
 package com.github.stuxuhai.log4j2;
 
 import java.util.Properties;
@@ -16,10 +9,6 @@ import kafka.producer.ProducerConfig;
 import org.apache.logging.log4j.core.appender.AbstractManager;
 import org.apache.logging.log4j.core.config.Property;
 
-/**
- * @author wuya
- *
- */
 public class KafkaManager extends AbstractManager {
 
 	private ProducerConfig config;
