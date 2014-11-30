@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info" packages="com.mogujie.log4j2.appender">
+	<Appenders>
+		<Console name="console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%m%n" />
+		</Console>
+		<Kafka name="kafka" topic="test">
+			<Property name="metadata.broker.list">127.0.0.1:9092</Property>
+			<Property name="serializer.class">kafka.serializer.StringEncoder</Property>
+		</Kafka>
+	</Appenders>
+
+	<Loggers>
+		<AsyncLogger name="async">
+			<AppenderRef ref="kafka" />
+		</AsyncLogger>
+		<Root level="info">
+			<AppenderRef ref="kafka" />
+		</Root>
+	</Loggers>
+
+</Configuration>
